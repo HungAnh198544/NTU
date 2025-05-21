@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="66130097_66.CNTT3_Bai2"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-25 08:56:46 AM"/>
+        <attribute name="created" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzA4OjQzOjIzIEFNOzIzNTI="/>
+        <attribute name="edited" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzA4OjU2OjQ2IEFNOzI7MjQ3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, a, b, c, d, e" type="Integer" array="False" size=""/>
+            <output expression="&quot;Nhap so nguyen co 5 chu so: &quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="10000 &lt;= n &amp;&amp; n &lt;= 99999">
+                <then>
+                    <assign variable="a" expression="n / 10000"/>
+                    <assign variable="b" expression="(n % 10000) / 1000"/>
+                    <assign variable="c" expression="(n % 1000) / 100"/>
+                    <assign variable="d" expression="(n % 100) / 10"/>
+                    <assign variable="e" expression="n % 10"/>
+                    <if expression="a == e &amp;&amp; b == d">
+                        <then>
+                            <output expression="&quot;So &quot;&amp;n &amp;&quot; la so doi xung&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;So &quot;&amp;n &amp;&quot; khong phai la so doi xung&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Khong giai quyet vi du lieu khong hop le&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

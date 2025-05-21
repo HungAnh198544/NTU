@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="66130097_66.CNTT3_Bai4"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-25 10:08:52 AM"/>
+        <attribute name="created" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzA5OjE4OjI2IEFNOzIzNTg="/>
+        <attribute name="edited" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzEwOjA4OjUyIEFNOzE7MjQ1Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Nhap so nguyen&quot;" newline="True"/>
+            <declare name="n, b0, b1, b2, b3, b4, b5, b6, b7" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <if expression="0 &lt; n &amp;&amp; n &lt;= 255">
+                <then>
+                    <assign variable="b0" expression="n % 2"/>
+                    <assign variable="n" expression="n / 2"/>
+                    <assign variable="b1" expression="n % 2"/>
+                    <assign variable="n" expression="n / 2"/>
+                    <assign variable="b2" expression="n % 2"/>
+                    <assign variable="n" expression="n / 2"/>
+                    <assign variable="b3" expression="n % 2"/>
+                    <assign variable="n" expression="n / 2"/>
+                    <assign variable="b4" expression="n % 2"/>
+                    <assign variable="n" expression="n / 2"/>
+                    <assign variable="b5" expression="n % 2"/>
+                    <assign variable="n" expression="n / 2"/>
+                    <assign variable="b6" expression="n % 2"/>
+                    <assign variable="n" expression="n / 2"/>
+                    <assign variable="b7" expression="n % 2"/>
+                    <assign variable="n" expression="n / 2"/>
+                    <output expression="&quot;Ket qua chuyen doi sang nhi phan: &quot;&amp;b7 &amp;&quot;&quot;&amp;b6 &amp;&quot;&quot;&amp;b5 &amp;&quot;&quot;&amp;b4 &amp;&quot;&quot;&amp;b3 &amp;&quot;&quot;&amp;b2 &amp;&quot;&quot;&amp;b1 &amp;&quot;&quot;&amp;b0 &amp;&quot;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Khong thuc hien chuyen doi&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

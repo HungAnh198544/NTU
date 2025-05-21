@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="66130097_66.CNTT3"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-25 08:57:07 AM"/>
+        <attribute name="created" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzA4OjE3OjMwIEFNOzIzNTE="/>
+        <attribute name="edited" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzA4OjU3OjA3IEFNOzI7MjQ2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, a, b, c, d, max" type="Integer" array="False" size=""/>
+            <output expression="&quot;Nhap so nguyen co 4 chu so: &quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="1000 &lt;= n &amp;&amp; n &lt;= 9999">
+                <then>
+                    <assign variable="a" expression="n / 1000"/>
+                    <assign variable="b" expression="(n % 1000) / 100"/>
+                    <assign variable="c" expression="(n % 100) / 10"/>
+                    <assign variable="d" expression="n % 10"/>
+                    <assign variable="max" expression="a"/>
+                    <if expression="max &lt; b">
+                        <then>
+                            <assign variable="max" expression="b"/>
+                        </then>
+                        <else>
+                            <assign variable="max" expression="max"/>
+                        </else>
+                    </if>
+                    <if expression="max &lt; c">
+                        <then>
+                            <assign variable="max" expression="c"/>
+                        </then>
+                        <else>
+                            <assign variable="max" expression="max"/>
+                        </else>
+                    </if>
+                    <if expression="max &lt; d">
+                        <then>
+                            <assign variable="max" expression="d"/>
+                        </then>
+                        <else>
+                            <assign variable="max" expression="max"/>
+                        </else>
+                    </if>
+                    <output expression="&quot;Ki so lon nhat cua &quot;&amp;n &amp;&quot; la: &quot;&amp;max &amp;&quot;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Khong giai quyet vi du lieu khong hop le&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

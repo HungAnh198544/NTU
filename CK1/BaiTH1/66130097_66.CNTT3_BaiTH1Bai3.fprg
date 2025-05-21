@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="66130097_66.CNTT3_Bai3"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-25 09:18:25 AM"/>
+        <attribute name="created" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzA4OjUwOjAzIEFNOzIzNDg="/>
+        <attribute name="edited" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzA5OjE4OjI1IEFNOzI7MjQ2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Nhap vao 1 ky tu: &quot;" newline="True"/>
+            <declare name="k" type="String" array="False" size=""/>
+            <input variable="k"/>
+            <if expression="&quot;0&quot; &lt;= k &amp;&amp; k &lt;= &quot;9&quot;">
+                <then>
+                    <output expression="&quot;&quot;&amp;k &amp;&quot; thuoc nhom ky so&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="(&quot;a&quot; &lt;= k &amp;&amp; k &lt;= &quot;z&quot;) || (&quot;A&quot; &lt;= k &amp;&amp; k &lt;= &quot;Z&quot;)">
+                        <then>
+                            <output expression="&quot;&quot;&amp;k &amp;&quot; thuoc nhom chu cai&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="k == &quot;+&quot; || k == &quot;-&quot; || k == &quot;*&quot; || k == &quot;/&quot;">
+                                <then>
+                                    <output expression="&quot;&quot;&amp;k &amp;&quot; thuoc nhom phep toan so hoc&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;&quot;&amp;k &amp;&quot; thuoc nhom ky tu dac biet&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

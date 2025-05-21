@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="66130097_66.CNTT3_Bai5"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-25 10:13:58 AM"/>
+        <attribute name="created" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzEwOjA4OjU0IEFNOzIzNTA="/>
+        <attribute name="edited" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzEwOjA5OjIxIEFNOzE7QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzA4OjE3OjMwIEFNOzY2MTMwMDk3XzY2LkNOVFQzX0JhaTEuZnByZzs2ODQw"/>
+        <attribute name="edited" value="QWRtaW47MjA2TkROLUgyNTsyMDI1LTAyLTI1OzEwOjEzOjU4IEFNOzE7MjQ1OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, a, b, c, d" type="Integer" array="False" size=""/>
+            <output expression="&quot;Nhap so nguyen co 4 chu so: &quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="1000 &lt;= n &amp;&amp; n &lt;= 9999">
+                <then>
+                    <assign variable="a" expression="n / 1000"/>
+                    <assign variable="b" expression="(n % 1000) / 100"/>
+                    <assign variable="c" expression="(n % 100) / 10"/>
+                    <assign variable="d" expression="n % 10"/>
+                    <output expression="&quot;So dao nguoc: &quot;&amp;d &amp;&quot;&quot;&amp;c &amp;&quot;&quot;&amp;b &amp;&quot;&quot;&amp;a &amp;&quot;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Khong giai quyet vi du lieu khong hop le&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
