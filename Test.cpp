@@ -1,38 +1,40 @@
 #include <stdio.h>
 #include <string.h>
 
-struct HOCSINH
-{
-    char HoTenHS[50];
-    float Van, Toan;
-};
+#define MAX 100
 
-void NhapHS(HOCSINH &hs) {
-    printf(" - Nhap ho va ten HS: ");
-    gets(hs.HoTenHS);
-    printf(" - Nhap diem Van: ");
-    scanf("%.2f", &hs.Van);
-    printf(" - Nhap diem Toan: ");
-    scanf("%.2f", &hs.Toan);
+int DemKyTuChuCai(char s[MAX]) {
+  int dem = 0;
+  for (int i = 0; i < strlen(s); i++) {
+    if (s[i] >= 'a' && s[i] <= 'z' || s[i] >= 'A' && s[i] <= 'Z') {
+      dem++;
+    }
+  }
+  return dem;
 }
 
-float TinhDiemTB() {
-    return (hs.Van * 1 + hs.Toan * 2) / 3;
+char InTuNamTren1Dong(char s[MAX]) {
+  printf("\nIn moi tu tren 1 dong: \n");
+	for(int i = 0; i<strlen(s); i++)
+	{
+		if(s[i] == ' ')
+			printf("\n");
+		else printf("%c",s[i]);
+	}
 }
 
 int main() {
-    HOCSINH hs;
-    float dtbm;
+  char s[MAX];
 
-    printf("Nhap ho va ten HS: ");
-    NhapHS(hs);
+  printf("Nhap chuoi: ");
+  gets(s);
+  printf("Chuoi vua nhap: %s\n", s);
 
-    dtbm = TinhDiemTB(hs);
-    printf("\n Ket qua: ");
-    printf("Ho Ten                    Toan     Van     Diem TB");
-    printf("%-25s%-9.1f%-8.1f%-7.1f", hs.HoTenHS, hs.Van, hs.Toan, dtbm);
+  int KQ = DemKyTuChuCai(s);
+  printf("So luong ky tu chu cai: %d", KQ);
 
-    return 1;
+  InTuNamTren1Dong(s);
+
+  return 0;
 }
-
 
