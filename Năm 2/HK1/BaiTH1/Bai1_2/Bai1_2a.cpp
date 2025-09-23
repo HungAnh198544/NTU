@@ -1,15 +1,19 @@
 #include <stdio.h> 
 
+#define MAX 10000
+
 int main() 
 { 
-  //nhập số n
   int n;
-  long sum = 0; 
   
-  for (int i = 1; i <= n; i++) 
-  { 
-    sum += i; 
-  } 
+  //nhập số n
+  do
+  {
+    printf("Nhap so nguyen duong n: ");
+    scanf("%d", &n);
+  } while (n <= 0 || n > MAX);
+  
+  long sum = n * (n + 1) / 2;
   printf("Tong = %ld\n", sum); 
   
   return 0; 
