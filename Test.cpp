@@ -15,19 +15,12 @@ int DemKyTuChuCai(char s[MAX]) {
 
 char InTuNamTren1Dong(char s[MAX]) {
   printf("\nIn moi tu tren 1 dong: \n");
-	for (int i = 0; i < strlen(s); i++)
+	for(int i = 0; i<strlen(s); i++)
 	{
-		if (s[i] == ' ')
+		if(s[i] == ' ')
 			printf("\n");
 		else printf("%c",s[i]);
 	}
-}
-
-char InTuMAX(char s[MAX])
-{
-  int Maxlen = 0;
-  char Max[MAX];
-  
 }
 
 int main() {
@@ -44,3 +37,4 @@ int main() {
 
   return 0;
 }
+
