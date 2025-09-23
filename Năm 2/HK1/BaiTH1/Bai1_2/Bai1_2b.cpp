@@ -12,10 +12,10 @@ int main()
     scanf("%d",&n); 
   } while (n < 1 || n > MAX); 
   
-  // Phiên bản chưa tối ưu: lặp qua tất cả các số 
-  for (int i = 1; i <= n; i++)  
-    if (i % 2 == 0)  
-      sum += i;         
+  // Lap qua cac so chan
+  for (int i = 2; i <= n; i += 2)  
+    sum += i;         
+  
   printf("Tong cac so chan tu 1 den %d la: %d\n", n, sum); 
   
   return 0; 
