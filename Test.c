@@ -1,20 +1,8 @@
-#include <stdio.h> 
+#include<stdio.h> 
 
-#define MAX 10000
+#define Square(x) (x)*(x) 
 
-int main() 
-{ 
-  int n;
-  
-  //nhập số n
-  do
-  {
-    printf("Nhap so nguyen duong n: ");
-    scanf("%d", &n);
-  } while (n <= 0 || n > MAX);
-  
-  long sum = n * (n + 1) / 2;
-  printf("Tong = %ld\n", sum); 
-  
-  return 0; 
-} 
+int main() { 
+  int a = 2; 
+  printf("%d",Square(a)); 
+}
