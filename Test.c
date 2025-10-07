@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 
 #define MAX 51
@@ -95,3 +96,13 @@ int main()
 
     return 0;
 }
+=======
+#include<stdio.h> 
+
+#define Square(x) (x)*(x) 
+
+int main() { 
+  int a = 2; 
+  printf("%d",Square(a)); 
+}
+>>>>>>> fdaf0ffad2fc7746a46289e01deb3a4c17dffe05
