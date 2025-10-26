@@ -18,7 +18,6 @@ int main() {
     int frame_count = 0; // Biến đếm số frame đã hiển thị
 
     // Thông báo bắt đầu
-    printf("Press Enter to start playing 'Bad Apple [30 FPS]'...\n");
     getchar(); // Chờ user nhấn Enter
     
 	// Xóa bất kỳ ký tự dư thừa nào trong bộ đệm đầu vào
