@@ -1,40 +1,32 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void SelectionSort(int a[], int n) 
-{
-    for (int i = 0; i < n - 1; i++) {
-        int k = i;
-        for (int j = i + 1; j < n; j++) {
-            if (a[j] < a[k])
-                k = j;
-        }
-
-        if (k != i) {
-            int temp = a[i];
-            a[i] = a[k];
-            a[k] = temp;
-        }
-
-        for (int t = 0; t < n; t++) {
-            if (t == i) 
-              printf("[%d] ", a[t]);
-            else 
-              printf("%d ", a[t]);
-        }
-        printf("\n");
-    }
+int cmp(const void *a, const void *b) {
+    long long x = *(long long *)a;
+    long long y = *(long long *)b;
+    if (x > y) return 1;
+    if (x < y) return -1;
+    return 0;
 }
 
-int main()
-{
+int main() {
     int n;
     scanf("%d", &n);
 
-    int a[n];
+    long long a[100000];  
     for (int i = 0; i < n; i++)
-        scanf("%d", &a[i]);
+        scanf("%lld", &a[i]);
 
-    SelectionSort(a, n);
+    qsort(a, n, sizeof(long long), cmp);
 
+    long long kq = a[1] - a[0];
+    for (int i = 1; i < n; i++) 
+    {
+        long long hieu = a[i] - a[i - 1];
+        if (hieu < kq)
+            kq = hieu;
+    }
+
+    printf("%lld\n", kq);
     return 0;
 }
