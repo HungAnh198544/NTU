@@ -2,9 +2,16 @@
 #include <string.h>
 #include <ctype.h>
 
-int NhapChuoi(char *s)
+void NhapChuoi(char *s)
 {
-
+    char c = getchar(); 
+    if (c == '\n' || c == EOF) 
+    {
+        *s = '\0'; 
+        return;
+    }
+    *s = c;                
+    NhapChuoi(s + 1);      
 }
 
 int DemKyTuChuoi(char *s)

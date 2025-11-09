@@ -37,12 +37,12 @@ int main()
     printf("So ky tu la chu so: %d\n", soChuSo);
 
     int soChuHoa = DemChuHoa(s, 0);
-    printf("So ky tu la chu cai HOA: %d\n", soChuHoa);
+    printf("So ky tu la chu cai hoa: %d\n", soChuHoa);
 
     if (KTTangDan(s, 0))
         printf("Chuoi tang dan theo thu tu ma ASCII.\n");
     else
-        printf("Chuoi KHONG tang dan theo thu tu ma ASCII.\n");
+        printf("Chuoi khong tang dan theo thu tu ma ASCII.\n");
 
     return 0;
 }
